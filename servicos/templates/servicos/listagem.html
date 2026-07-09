@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Portfólio de Serviços</h2>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Serviço</th>
+<th>Responsável</th>
+<th>Tempo</th>
+
+</tr>
+
+{% for servico in servicos %}
+
+<tr>
+
+<td>
+
+<a href="{% url 'detalhe_servico' servico.id %}">
+
+{{ servico.id }}
+
+</a>
+
+</td>
+
+<td>{{ servico.nome_servico }}</td>
+
+<td>{{ servico.responsavel }}</td>
+
+<td>{{ servico.tempo_estimado }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h1>{{ servico.nome_servico }}</h1>
+
+<br>
+
+<p>
+
+<strong>Responsável:</strong>
+
+{{ servico.responsavel }}
+
+</p>
+
+<br>
+
+<p>
+
+<strong>Tempo estimado:</strong>
+
+{{ servico.tempo_estimado }}
+
+</p>
+
+<br>
+
+<h3>Requisitos</h3>
+
+<p>
+
+{{ servico.requisitos }}
+
+</p>
+
+<a href="{% url 'lista_servicos' %}" class="btn">
+
+Voltar
+
+</a>
+
+</div>
+
+{% endblock %}

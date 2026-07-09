@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h1>{{ produto.nome }}</h1>
+
+<br>
+
+<h2 style="color:green">
+
+R$ {{ produto.preco }}
+
+</h2>
+
+<br>
+
+<p>
+
+<strong>Categoria:</strong>
+
+{{ produto.categoria }}
+
+</p>
+
+<br>
+
+<p>
+
+{{ produto.descricao }}
+
+</p>
+
+<a href="{% url 'lista_produtos' %}" class="btn">
+
+Voltar
+
+</a>
+
+</div>
+
+{% endblock %}

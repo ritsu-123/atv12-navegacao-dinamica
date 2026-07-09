@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Catálogo de Produtos</h2>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Produto</th>
+<th>Categoria</th>
+<th>Preço</th>
+
+</tr>
+
+{% for produto in produtos %}
+
+<tr>
+
+<td>
+
+<a href="{% url 'detalhe_produto' produto.id %}">
+
+{{ produto.id }}
+
+</a>
+
+</td>
+
+<td>{{ produto.nome }}</td>
+
+<td>{{ produto.categoria }}</td>
+
+<td>R$ {{ produto.preco }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

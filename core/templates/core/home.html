@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Bem-vindo!</h2>
+
+    <br>
+
+    <p>
+        Este sistema foi desenvolvido utilizando Django,
+        herança de templates e navegação dinâmica.
+    </p>
+
+    <br>
+
+    <a href="{% url 'lista_produtos' %}" class="btn">
+        Ver Produtos
+    </a>
+
+    <a href="{% url 'lista_servicos' %}" class="btn">
+        Ver Serviços
+    </a>
+
+</div>
+
+{% endblock %}
